@@ -294,7 +294,7 @@ const HomePage: React.FC = () => {
                         <div className="flex animate-slide">
                             {duplicatedClientLogos.map((logo, index) => (
                                 <div key={index} className="flex-shrink-0 mx-4">
-                                    <img src={logo} alt={`Client logo ${(index % clientLogos.length) + 1}`} className="h-20 w-auto  duration-300" />
+                                    <img src={logo} alt={`Client logo ${(index % clientLogos.length) + 1}`} className="h-20 w-auto  duration-300 rounded-full" />
                                 </div>
                             ))}
                         </div>
