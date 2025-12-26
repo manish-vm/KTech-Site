@@ -19,7 +19,7 @@ const Footer: React.FC = () => {
             {/* Column 1: Brand & Info */}
             <div className="space-y-4">
               <Link to="/" className="text-3xl font-extrabold text-white">
-               <img src="pages/logo.png" height="30px" width="30px" alt="K-Tech Logo"/>K-Tech
+               <img src="https://github.com/manish-vm/KTech-Site/blob/main/pages/logo.png?raw=true" height="30px" width="30px" alt="K-Tech Logo"/>K-Tech
               </Link>
               <p className="text-gray-300 text-sm">Part of Krishnapillai Group of Companies</p>
               <div className="flex items-center justify-center md:justify-start">
