@@ -11,7 +11,7 @@ const Header: React.FC = () => {
     }`;
 
   const mobileNavLinkClass = ({ isActive }: { isActive: boolean }) =>
-    `block py-2 px-4 text-sm ${isActive ? 'bg-gradient-to-t from-purple-800 via-fuchsia-700 to-pink-500 text-white' : 'text-primary hover:bg-secondary hover:text-white'}`;
+    `block py-2 px-4 text-sm ${isActive ? 'bg-gradient-to-t from-purple-800 via-fuchsia-700 to-pink-500 text-white' : 'text-primary'}`;
   
   const services = [
     { name: 'Digital Marketing', path: '/services', end: true },
@@ -63,7 +63,7 @@ const Header: React.FC = () => {
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               type="button"
-              className="bg-primary inline-flex items-center justify-center p-2 rounded-md text-white hover:bg-secondary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-primary focus:ring-white"
+              className="bg-fuchsia-700 inline-flex items-center justify-center p-2 rounded-md text-white hover:bg-fuchsia-700 focus:outline-none "
               aria-controls="mobile-menu"
               aria-expanded="false"
             >
@@ -83,22 +83,51 @@ const Header: React.FC = () => {
       </div>
 
       {isMenuOpen && (
-        <div className="md:hidden" id="mobile-menu">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <NavLink to="/" className={mobileNavLinkClass} onClick={() => setIsMenuOpen(false)}>Home</NavLink>
-            <NavLink to="/about" className={mobileNavLinkClass} onClick={() => setIsMenuOpen(false)}>About Us</NavLink>
-            <NavLink to="/services" className={mobileNavLinkClass} end={true} onClick={() => setIsMenuOpen(false)}>Services</NavLink>
-            <div className="pl-4 border-l-2 border-accent">
-                {services.map(service => (
-                     <NavLink key={service.path} to={service.path} end={service.end} className={mobileNavLinkClass} onClick={() => setIsMenuOpen(false)}>{service.name}</NavLink>
-                ))}
-            </div>
-            <NavLink to="/blog" className={mobileNavLinkClass} onClick={() => setIsMenuOpen(false)}>Blog</NavLink>
-            <NavLink to="/careers" className={mobileNavLinkClass} onClick={() => setIsMenuOpen(false)}>Careers</NavLink>
-            <Link to="/contact" className="block text-center mt-4 w-full py-2 px-4 bg-gradient-to-t from-pink-500 via-fuchsia-700 to-purple-800 text-white rounded-full text-sm font-medium hover:bg-orange-700 transition-colors duration-300" onClick={() => setIsMenuOpen(false)}>Contact Us</Link>
-          </div>
+  <div className="md:hidden" id="mobile-menu">
+    <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+      <NavLink to="/" className={mobileNavLinkClass} onClick={() => setIsMenuOpen(false)}>Home</NavLink>
+      <NavLink to="/about" className={mobileNavLinkClass} onClick={() => setIsMenuOpen(false)}>About Us</NavLink>
+      
+      {/* Services with toggle */}
+      <button
+        onClick={() => setIsServicesOpen(!isServicesOpen)}
+        className="w-full text-left block py-2 px-4 text-sm text-primary hover:bg-secondary hover:text-white rounded-md"
+      >
+        Services
+      </button>
+
+      {isServicesOpen && (
+        <div className="pl-4 border-l-2 border-fuchsia-700">
+          {services.map(service => (
+            <NavLink
+              key={service.path}
+              to={service.path}
+              end={service.end}
+              className={mobileNavLinkClass}
+              onClick={() => {
+                setIsMenuOpen(false);
+                setIsServicesOpen(false); // close submenu after clicking
+              }}
+            >
+              {service.name}
+            </NavLink>
+          ))}
         </div>
       )}
+
+      <NavLink to="/blog" className={mobileNavLinkClass} onClick={() => setIsMenuOpen(false)}>Blog</NavLink>
+      <NavLink to="/careers" className={mobileNavLinkClass} onClick={() => setIsMenuOpen(false)}>Careers</NavLink>
+      <Link
+        to="/contact"
+        className="block text-center mt-4 w-full py-2 px-4 bg-gradient-to-t from-pink-500 via-fuchsia-700 to-purple-800 text-white rounded-full text-sm font-medium hover:bg-orange-700 transition-colors duration-300"
+        onClick={() => setIsMenuOpen(false)}
+      >
+        Contact Us
+      </Link>
+    </div>
+  </div>
+)}
+
     </header>
   );
 };

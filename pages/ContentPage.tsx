@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from "react-helmet";
 
 const contentTypes = [
     { icon: '📰', title: 'Blog & Article Writing', description: 'SEO friendly content that ranks and educates your audience.' },
@@ -27,25 +28,34 @@ const whyChooseUsPoints = [
 ];
 
 const clientLogos = [
-  'https://via.placeholder.com/150x60/cccccc/ffffff?text=Client+A',
-  'https://via.placeholder.com/150x60/cccccc/ffffff?text=Client+B',
-  'https://via.placeholder.com/150x60/cccccc/ffffff?text=Client+C',
-  'https://via.placeholder.com/150x60/cccccc/ffffff?text=Client+D',
+    'https://via.placeholder.com/150x60/cccccc/ffffff?text=Client+A',
+    'https://via.placeholder.com/150x60/cccccc/ffffff?text=Client+B',
+    'https://via.placeholder.com/150x60/cccccc/ffffff?text=Client+C',
+    'https://via.placeholder.com/150x60/cccccc/ffffff?text=Client+D',
 ];
 
 const ContentPage: React.FC = () => {
     return (
         <div className="bg-white">
-            <section className="bg-secondary text-white py-20" style={{backgroundImage: "url('https://plus.unsplash.com/premium_photo-1661775756810-82dbd209fc95?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8d3JpdGluZyUyMGJhY2tncm91bmR8ZW58MHx8MHx8fDA%3D')", backgroundSize: 'cover', backgroundPosition: 'center', backgroundBlendMode: 'overlay', backgroundColor: 'rgba(15, 58, 123, 0.7)'}}>
+            <Helmet>
+                <title>Content Writing Services in Chennai | KTech Digital Solutions</title>
+
+                <meta name="description"
+                    content="Get SEO-friendly blogs, website content & articles from professional content writers in Chennai. KTech Digital Solutions offers high-quality content writing services." />
+
+                <meta name="keywords"
+                    content="content writing Chennai, SEO content writing Chennai, blog writing Chennai, website content writing Chennai, article writing Chennai, content marketing Tamil Nadu" />
+            </Helmet>
+            <section className="bg-secondary text-white py-20" style={{ backgroundImage: "url('https://plus.unsplash.com/premium_photo-1661775756810-82dbd209fc95?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8d3JpdGluZyUyMGJhY2tncm91bmR8ZW58MHx8MHx8fDA%3D')", backgroundSize: 'cover', backgroundPosition: 'center', backgroundBlendMode: 'overlay', backgroundColor: 'rgba(15, 58, 123, 0.7)' }}>
                 <div className="container mx-auto px-6 lg:px-8 text-center">
                     <h1 className="text-4xl md:text-5xl font-extrabold mb-2">Content Writing Agency in Tamil Nadu & Chennai</h1>
                     <p className="text-lg text-gray-200">SEO Copywriting & Website Copy Experts</p>
                 </div>
             </section>
-            
+
             <section className="py-16 text-center">
                 <div className="container mx-auto px-6 lg:px-8">
-                     <p className="max-w-3xl mx-auto text-lg text-gray-700 mb-8">
+                    <p className="max-w-3xl mx-auto text-lg text-gray-700 mb-8">
                         Do you need content that connects, converts, and ranks? At KTech Digital Solutions (a part of Krishnapillai Group of Companies), we offer premium content writing services in Tamil Nadu and Chennai, crafting compelling copy for blogs, websites, and social media that engages your audience and boosts your search rankings.
                     </p>
                     <h2 className="text-3xl font-bold text-primary mb-4">What is Content Writing & Why It Matters?</h2>
@@ -55,14 +65,14 @@ const ContentPage: React.FC = () => {
                 </div>
             </section>
 
-             <section className="py-12 bg-light">
+            <section className="py-12 bg-light">
                 <div className="container mx-auto px-6 lg:px-8">
                     <div className="text-center mb-12">
                         <h2 className="text-4xl font-extrabold text-primary">Types of Content We Provide</h2>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
                         {contentTypes.map((item, index) => (
-                             <div key={index} className="bg-white p-6 rounded-lg shadow-md border-t-4 border-fuchsia-700 hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300">
+                            <div key={index} className="bg-white p-6 rounded-lg shadow-md border-t-4 border-fuchsia-700 hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300">
                                 <div className="text-4xl mb-4">{item.icon}</div>
                                 <h3 className="text-xl font-bold text-primary mb-2">{item.title}</h3>
                                 <p className="text-gray-600">{item.description}</p>
@@ -75,19 +85,19 @@ const ContentPage: React.FC = () => {
             <section className="py-20">
                 <div className="container mx-auto px-6 lg:px-8">
                     <div className="text-center mb-12">
-                         <h2 className="text-4xl font-extrabold text-primary">Why Choose KTech for Content Writing?</h2>
+                        <h2 className="text-4xl font-extrabold text-primary">Why Choose KTech for Content Writing?</h2>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                         {whyChooseUsPoints.map((point, index) => (
                             <div key={index} className="text-center p-6 bg-light rounded-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300">
-                                 <svg className="w-12 h-12 text-fuchsia-700 mx-auto mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                                 <p className="font-semibold text-primary">{point}</p>
+                                <svg className="w-12 h-12 text-fuchsia-700 mx-auto mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                                <p className="font-semibold text-primary">{point}</p>
                             </div>
                         ))}
                     </div>
                 </div>
             </section>
-            
+
             <section className="py-20 bg-light">
                 <div className="container mx-auto px-6 lg:px-8">
                     <div className="text-center mb-12">
@@ -107,7 +117,7 @@ const ContentPage: React.FC = () => {
                     </div>
                 </div>
             </section>
-            
+
             <section className="py-20">
                 <div className="container mx-auto px-6 lg:px-8 text-center">
                     <h2 className="text-3xl font-bold text-primary mb-8">Trusted by Brands Across Tamil Nadu</h2>
@@ -119,12 +129,12 @@ const ContentPage: React.FC = () => {
                     </div>
                 </div>
             </section>
-            
+
             <section className="py-20 bg-fuchsia-700 text-center text-white">
-                 <div className="container mx-auto px-6 lg:px-8">
+                <div className="container mx-auto px-6 lg:px-8">
                     <h2 className="text-3xl font-bold mb-4">Ready to elevate your brand with compelling content? ✅</h2>
                     <p className="text-lg mb-6">Let’s discuss your content needs.</p>
-                     <Link to="/contact" className="inline-block bg-white text-fuchsia-700 font-bold py-3 px-8 rounded-full text-lg hover:bg-gray-200 transition-colors duration-300">
+                    <Link to="/contact" className="inline-block bg-white text-fuchsia-700 font-bold py-3 px-8 rounded-full text-lg hover:bg-gray-200 transition-colors duration-300">
                         Get a Free Content Audit & Quote
                     </Link>
                 </div>

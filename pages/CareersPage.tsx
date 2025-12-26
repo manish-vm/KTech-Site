@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from "react-helmet";
 
 const whyWorkWithUs = [
     { title: 'Dynamic Environment', description: 'Be part of a creative team where your ideas matter and you can make a real impact.' },
@@ -19,22 +20,28 @@ const whatWeLookFor = [
 const CareersPage: React.FC = () => {
     return (
         <div className="bg-white">
-            <section className="bg-secondary text-white py-20" style={{backgroundImage: "url('https://cmb.ac.lk/wp-content/uploads/Job-Fair-2016.jpg')", backgroundSize: 'cover', backgroundPosition: 'center', backgroundBlendMode: 'overlay', backgroundColor: 'rgba(3, 15, 33, 0.81)'}}>
+            <Helmet>
+                <title>Careers at KTech Digital Solutions | Digital Marketing Jobs Chennai</title>
+                <meta name="description" content="Join KTech Digital Solutions, a leading digital marketing company in Chennai. Explore SEO, SMM, PPC, design & development job opportunities in Tamil Nadu." />
+                <meta name="keywords" content="digital marketing jobs Chennai, SEO jobs Chennai, PPC jobs Chennai, SMM jobs Chennai, web development careers Chennai, Tamil Nadu marketing careers" />
+
+            </Helmet>
+            <section className="bg-secondary text-white py-20" style={{ backgroundImage: "url('https://cmb.ac.lk/wp-content/uploads/Job-Fair-2016.jpg')", backgroundSize: 'cover', backgroundPosition: 'center', backgroundBlendMode: 'overlay', backgroundColor: 'rgba(3, 15, 33, 0.81)' }}>
                 <div className="container mx-auto px-6 lg:px-8 text-center">
                     <h1 className="text-4xl md:text-5xl font-extrabold mb-2">Join Our Team at KTech Digital Solutions</h1>
                     <p className="text-lg text-gray-200">Careers in Digital Marketing & Tech in Tamil Nadu</p>
                 </div>
             </section>
-            
+
             <section className="py-16 text-center">
                 <div className="container mx-auto px-6 lg:px-8">
-                     <p className="max-w-3xl mx-auto text-lg text-gray-700">
+                    <p className="max-w-3xl mx-auto text-lg text-gray-700">
                         Are you passionate about digital marketing, creativity, and technology? KTech Digital Solutions (part of Krishnapillai Group of Companies) is growing, and we invite talented individuals from Chennai, Coimbatore, Madurai, Trichy, and all over Tamil Nadu to join our team. If you love making an impact through SEO, PPC, website development, content creation, or design, you’re in the right place.
                     </p>
                 </div>
             </section>
 
-             <section className="py-12 bg-light">
+            <section className="py-12 bg-light">
                 <div className="container mx-auto px-6 lg:px-8">
                     <div className="text-center mb-12">
                         <h2 className="text-4xl font-extrabold text-primary">Why Work With Us?</h2>
@@ -52,7 +59,7 @@ const CareersPage: React.FC = () => {
 
             <section className="py-20">
                 <div className="container mx-auto px-6 lg:px-8 grid md:grid-cols-2 gap-12 items-center">
-                     <div>
+                    <div>
                         <h2 className="text-3xl font-bold text-primary mb-6">What We Look for in You</h2>
                         <ul className="space-y-4">
                             {whatWeLookFor.map((point, index) => (
@@ -66,25 +73,25 @@ const CareersPage: React.FC = () => {
                         </ul>
                     </div>
                     <div>
-                        <img src="https://amer247.com/_next/static/media/career.c2a007ca.svg" alt="KTech Team Collaboration" className="rounded-lg shadow-xl w-[400px] h-[400px]"/>
+                        <img src="https://amer247.com/_next/static/media/career.c2a007ca.svg" alt="KTech Team Collaboration" className="rounded-lg shadow-xl w-[400px] h-[400px]" />
                     </div>
                 </div>
             </section>
-            
+
             <section className="py-20 bg-light">
                 <div className="container mx-auto px-6 lg:px-8 text-center max-w-4xl">
                     <h2 className="text-4xl font-extrabold text-primary mb-6">How to Apply</h2>
                     <div className="text-lg text-gray-700 space-y-4 text-left p-8 border rounded-lg bg-white">
-                       <p>1. Send your resume/CV to <a href="mailto:careers@ktechdigi.com" className="font-bold text-accent hover:underline">careers@ktechdigi.com</a>.</p>
-                       <p>2. Include a cover letter explaining which role you’re applying for, your experience, and why you want to join our team.</p>
-                       <p>3. If relevant, please share your portfolio or samples of your work (e.g., blogs, websites, social media campaigns, designs).</p>
-                       <p>4. We will review all applications and reach out to shortlisted candidates for an interview. Interviews may include practical tasks or assignments depending on the role.</p>
+                        <p>1. Send your resume/CV to <a href="mailto:careers@ktechdigi.com" className="font-bold text-accent hover:underline">careers@ktechdigi.com</a>.</p>
+                        <p>2. Include a cover letter explaining which role you’re applying for, your experience, and why you want to join our team.</p>
+                        <p>3. If relevant, please share your portfolio or samples of your work (e.g., blogs, websites, social media campaigns, designs).</p>
+                        <p>4. We will review all applications and reach out to shortlisted candidates for an interview. Interviews may include practical tasks or assignments depending on the role.</p>
                     </div>
                 </div>
             </section>
 
             <section className="py-20 bg-accent text-center text-white">
-                 <div className="container mx-auto px-6 lg:px-8">
+                <div className="container mx-auto px-6 lg:px-8">
                     <h2 className="text-3xl font-bold mb-4">🚀 Think you have what it takes to help brands succeed online?</h2>
                     <a href="mailto:careers@ktechdigi.com" className="inline-block bg-white text-accent font-bold py-3 px-8 rounded-full text-lg hover:bg-gray-200 transition-colors duration-300">
                         Apply Now

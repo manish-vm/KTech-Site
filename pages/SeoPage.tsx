@@ -1,5 +1,5 @@
-
 import React, { useState } from 'react';
+import { Helmet } from "react-helmet";
 
 const offerings = [
     { title: 'On-Page SEO', description: 'Meta tags, titles, headings, content optimization, site structure.' },
@@ -30,10 +30,10 @@ const processSteps = [
 ];
 
 const faqs = [
-  { q: "How long before I see results with SEO?", a: "SEO is a long-term strategy. While some improvements can be seen in as little as 3 months, significant results typically take 6-12 months, depending on competition and your website's current state." },
-  { q: "Is local SEO enough or do I need global search too?", a: "It depends on your business goals. If you serve a local clientele in Tamil Nadu, local SEO is paramount. If you sell products or services online to a wider audience, a global SEO strategy is necessary for expansion." },
-  { q: "Will you help rank for “SEO services Chennai” and “SEO services Tamil Nadu”?", a: "Yes, our strategies are specifically designed to target relevant local and regional keywords like 'SEO services Chennai' to attract customers in your service areas." },
-  { q: "Do you guarantee first page of Google?", a: "No reputable SEO company can guarantee a #1 ranking. Google's algorithm is complex and constantly changing. However, we guarantee to use proven, white-hat SEO strategies to give you the best possible chance of achieving high rankings and sustainable organic growth." },
+    { q: "How long before I see results with SEO?", a: "SEO is a long-term strategy. While some improvements can be seen in as little as 3 months, significant results typically take 6-12 months, depending on competition and your website's current state." },
+    { q: "Is local SEO enough or do I need global search too?", a: "It depends on your business goals. If you serve a local clientele in Tamil Nadu, local SEO is paramount. If you sell products or services online to a wider audience, a global SEO strategy is necessary for expansion." },
+    { q: "Will you help rank for “SEO services Chennai” and “SEO services Tamil Nadu”?", a: "Yes, our strategies are specifically designed to target relevant local and regional keywords like 'SEO services Chennai' to attract customers in your service areas." },
+    { q: "Do you guarantee first page of Google?", a: "No reputable SEO company can guarantee a #1 ranking. Google's algorithm is complex and constantly changing. However, we guarantee to use proven, white-hat SEO strategies to give you the best possible chance of achieving high rankings and sustainable organic growth." },
 ];
 
 const FaqItem: React.FC<{ q: string, a: string }> = ({ q, a }) => {
@@ -55,16 +55,25 @@ const FaqItem: React.FC<{ q: string, a: string }> = ({ q, a }) => {
 const SeoPage: React.FC = () => {
     return (
         <div className="bg-white">
-            <section className="bg-secondary text-white py-20" style={{backgroundImage: "url('https://png.pngtree.com/background/20230617/original/pngtree-web-banner-and-business-graph-chart-mockup-featuring-a-3d-rendered-picture-image_3681684.jpg')", backgroundSize: 'cover', backgroundBlendMode: 'overlay', backgroundColor: 'rgba(13, 71, 161, 0.7)'}}>
+            <Helmet>
+                <title>SEO Services in Chennai | Best SEO Company - KTech Digital Solutions</title>
+
+                <meta name="description"
+                    content="Boost your rankings with expert SEO services in Chennai. KTech Digital Solutions offers keyword research, on-page SEO, link building & local SEO across Tamil Nadu." />
+
+                <meta name="keywords"
+                    content="SEO services Chennai, best SEO company Chennai, SEO agency Tamil Nadu, on-page SEO Chennai, link building services Chennai, local SEO Chennai, technical SEO Chennai" />
+            </Helmet>
+            <section className="bg-secondary text-white py-20" style={{ backgroundImage: "url('https://png.pngtree.com/background/20230617/original/pngtree-web-banner-and-business-graph-chart-mockup-featuring-a-3d-rendered-picture-image_3681684.jpg')", backgroundSize: 'cover', backgroundBlendMode: 'overlay', backgroundColor: 'rgba(13, 71, 161, 0.7)' }}>
                 <div className="container mx-auto px-6 lg:px-8 text-center">
                     <h1 className="text-4xl md:text-5xl font-extrabold mb-2">Best SEO Company in Tamil Nadu</h1>
                     <p className="text-lg text-gray-200">Your SEO Agency in Chennai & Beyond</p>
                 </div>
             </section>
-            
+
             <section className="py-16 text-center">
                 <div className="container mx-auto px-6 lg:px-8">
-                     <p className="max-w-3xl mx-auto text-lg text-gray-700">
+                    <p className="max-w-3xl mx-auto text-lg text-gray-700">
                         Are you searching for a reliable SEO company in Tamil Nadu that helps your business rank higher on Google? At KTech Digital Solutions (part of Krishnapillai Group of Companies), we specialize in delivering tailor-made SEO services for businesses in Chennai, Coimbatore, Madurai, Trichy, Salem and across Tamil Nadu. We understand how people search locally, and we build strategies that increase visibility, traffic, and conversions.
                     </p>
                 </div>
@@ -77,7 +86,7 @@ const SeoPage: React.FC = () => {
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                         {offerings.map((item, index) => (
-                             <div key={index} className="bg-white p-6 rounded-lg shadow-md border-l-4 border-fuchsia-700 hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300">
+                            <div key={index} className="bg-white p-6 rounded-lg shadow-md border-l-4 border-fuchsia-700 hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300">
                                 <h3 className="text-xl font-bold text-primary mb-2">{item.title}</h3>
                                 <p className="text-gray-600">{item.description}</p>
                             </div>
@@ -85,7 +94,7 @@ const SeoPage: React.FC = () => {
                     </div>
                 </div>
             </section>
-            
+
             <section className="py-20">
                 <div className="container mx-auto px-6 lg:px-8 grid md:grid-cols-2 gap-12 items-center">
                     <div>
@@ -102,7 +111,7 @@ const SeoPage: React.FC = () => {
                         </ul>
                     </div>
                     <div>
-                        <img src="https://www.pagetraffic.in/wp-content/uploads/2023/03/affordable-seo-services.png" alt="SEO Growth" className="rounded-lg shadow-xl w-full"/>
+                        <img src="https://www.pagetraffic.in/wp-content/uploads/2023/03/affordable-seo-services.png" alt="SEO Growth" className="rounded-lg shadow-xl w-full" />
                     </div>
                 </div>
             </section>
@@ -115,7 +124,7 @@ const SeoPage: React.FC = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {processSteps.map((step) => (
                             <div key={step.number} className="text-center p-6 bg-white rounded-lg shadow-md flex flex-col items-center hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300">
-                                 <div className="w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center text-2xl font-bold mb-4">
+                                <div className="w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center text-2xl font-bold mb-4">
                                     {step.number}
                                 </div>
                                 <h3 className="text-xl font-bold text-primary mb-2">{step.title}</h3>
@@ -125,8 +134,8 @@ const SeoPage: React.FC = () => {
                     </div>
                 </div>
             </section>
-            
-             <section className="py-20">
+
+            <section className="py-20">
                 <div className="container mx-auto px-6 lg:px-8 max-w-4xl">
                     <div className="text-center mb-12">
                         <h2 className="text-4xl font-extrabold text-primary">Frequently Asked Questions</h2>
@@ -136,9 +145,9 @@ const SeoPage: React.FC = () => {
                     </div>
                 </div>
             </section>
-            
+
             <section className="py-20 bg-fuchsia-700 text-center text-white">
-                 <div className="container mx-auto px-6 lg:px-8">
+                <div className="container mx-auto px-6 lg:px-8">
                     <h2 className="text-3xl font-bold mb-4">Ready to boost your online presence with the best SEO in Tamil Nadu?</h2>
                     <p className="text-lg">👉 Contact us today for a free SEO audit & quote.</p>
                 </div>

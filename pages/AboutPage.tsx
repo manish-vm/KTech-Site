@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Helmet } from "react-helmet";
 
 const whyChooseUsPoints = [
     "Backed by the legacy of the Krishnapillai Group of Companies",
@@ -12,8 +13,19 @@ const whyChooseUsPoints = [
 const AboutPage: React.FC = () => {
     return (
         <div className="bg-white">
+            <Helmet>
+                <title>About KTech Digital Solutions | A Krishnapillai Group Company</title>
+
+                <meta
+                    name="description"
+                    content="KTech Digital Solutions, part of Krishnapillai Group, is a trusted digital marketing agency in Chennai offering SEO, PPC, SMM, branding & IT solutions across Tamil Nadu."
+                />
+
+                <meta name="keywords" content="about KTech Digital Solutions, Krishnapillai group company, digital marketing company Tamil Nadu, SEO agency Chennai, PPC company Chennai, social media agency Chennai" />
+
+            </Helmet>
             {/* Hero Section */}
-            <section className="bg-secondary text-white py-20" style={{backgroundImage: "url('https://www.shutterstock.com/image-photo/contact-us-businessman-holding-cell-260nw-1860985426.jpg')", backgroundSize: 'cover', backgroundPosition: 'center', backgroundBlendMode: 'overlay', backgroundColor: 'rgba(15, 58, 123, 0.7)'}}>
+            <section className="bg-secondary text-white py-20" style={{ backgroundImage: "url('https://www.shutterstock.com/image-photo/contact-us-businessman-holding-cell-260nw-1860985426.jpg')", backgroundSize: 'cover', backgroundPosition: 'center', backgroundBlendMode: 'overlay', backgroundColor: 'rgba(15, 58, 123, 0.7)' }}>
                 <div className="container mx-auto px-6 lg:px-8 text-center">
                     <h1 className="text-4xl md:text-5xl font-extrabold mb-2">About Us – KTech Digital Solutions</h1>
                     <p className="text-lg text-gray-200">A Proud Division of the Krishnapillai Group of Companies</p>
@@ -24,7 +36,7 @@ const AboutPage: React.FC = () => {
             <section className="py-20">
                 <div className="container mx-auto px-6 lg:px-8 grid md:grid-cols-2 gap-12 items-center">
                     <div>
-                        <img src="https://t4.ftcdn.net/jpg/02/52/76/09/360_F_252760983_ZTCURKreID1WJkC7uiX6olt7hH0Q7v8X.jpg" alt="KTech Team" className="rounded-lg shadow-xl w-full"/>
+                        <img src="https://t4.ftcdn.net/jpg/02/52/76/09/360_F_252760983_ZTCURKreID1WJkC7uiX6olt7hH0Q7v8X.jpg" alt="KTech Team" className="rounded-lg shadow-xl w-full" />
                     </div>
                     <div className="text-lg text-gray-700">
                         <h2 className="text-3xl font-bold text-primary mb-4">Who We Are</h2>
@@ -74,12 +86,12 @@ const AboutPage: React.FC = () => {
                     </div>
                 </div>
             </section>
-            
+
             {/* Closing Note */}
             <section className="py-20 text-center">
                 <div className="container mx-auto px-6 lg:px-8">
                     <p className="text-xl text-gray-800 max-w-3xl mx-auto">
-                       Whether you are a small business in Chennai, a retail shop in Madurai, or an eCommerce brand in Coimbatore, KTech Digital Solutions – powered by the Krishnapillai Group of Companies – is here to scale your business online. Partner with us today and discover why we are recognized as one of the best digital marketing companies in Tamil Nadu.
+                        Whether you are a small business in Chennai, a retail shop in Madurai, or an eCommerce brand in Coimbatore, KTech Digital Solutions – powered by the Krishnapillai Group of Companies – is here to scale your business online. Partner with us today and discover why we are recognized as one of the best digital marketing companies in Tamil Nadu.
                     </p>
                 </div>
             </section>

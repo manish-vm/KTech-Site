@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from "react-helmet";
 
 const initialBlogPosts = [
     {
@@ -48,28 +49,34 @@ const BlogPage: React.FC = () => {
 
     return (
         <div className="bg-white">
-            <section className="bg-primary text-white py-20" style={{backgroundImage: "url('https://www.searchenginejournal.com/wp-content/uploads/2024/04/22-places-you-should-be-sharing-your-content-576.jpg')", backgroundSize: 'cover', backgroundBlendMode: 'overlay', backgroundColor: 'rgba(2, 21, 52, 0.81)'}}>
+            <Helmet>
+                <title>Digital Marketing Blog Chennai | KTech Digital Solutions</title>
+                <meta name="description" content="Stay updated with the latest digital marketing tips, SEO strategies & social media trends. Read KTech Digital Solutions’ blog from Chennai." />
+                <meta name="keywords" content="digital marketing blog Chennai, SEO blog Tamil Nadu, social media tips Chennai, PPC blog Chennai, content marketing blog Chennai" />
+
+            </Helmet>
+            <section className="bg-primary text-white py-20" style={{ backgroundImage: "url('https://www.searchenginejournal.com/wp-content/uploads/2024/04/22-places-you-should-be-sharing-your-content-576.jpg')", backgroundSize: 'cover', backgroundBlendMode: 'overlay', backgroundColor: 'rgba(2, 21, 52, 0.81)' }}>
                 <div className="container mx-auto px-6 lg:px-8 text-center">
                     <h1 className="text-4xl md:text-5xl font-extrabold mb-2">Digital Marketing Blog & Resources</h1>
                     <p className="text-lg text-gray-200">Tips, Trends & Insights from Tamil Nadu's Experts</p>
                 </div>
             </section>
-            
+
             <section className="py-16">
                 <div className="container mx-auto px-6 lg:px-8">
                     <div className="text-center mb-12">
-                         <p className="max-w-3xl mx-auto text-lg text-gray-700">
+                        <p className="max-w-3xl mx-auto text-lg text-gray-700">
                             Welcome to the K-Tech Digital Solutions Blog, your resource hub for all things digital marketing in Tamil Nadu. Whether you are a business owner in Chennai, Coimbatore, Madurai, Trichy, or any part of the state, here you’ll find expert tips, strategy guides, case studies, and latest trends to grow your online presence, boost SEO, run better ad campaigns, and stay ahead in social media.
                         </p>
                     </div>
 
-                     <div className="text-center mb-16">
+                    <div className="text-center mb-16">
                         <h2 className="text-4xl font-extrabold text-primary">Latest Articles</h2>
                         <p className="mt-4 text-lg text-gray-600">Our latest thoughts, ideas, and insights.</p>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-                       {blogPosts.map((post, index) => (
+                        {blogPosts.map((post, index) => (
                             <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden group transform hover:-translate-y-2 transition-all duration-300 border">
                                 <img src={post.image} alt={post.title} className="w-full h-48 object-cover group-hover:opacity-90 transition-opacity" />
                                 <div className="p-6 flex flex-col">
@@ -86,7 +93,7 @@ const BlogPage: React.FC = () => {
                             </div>
                         ))}
                     </div>
-                     {blogPosts.length === 0 && (
+                    {blogPosts.length === 0 && (
                         <div className="mt-16 text-center text-2xl font-bold text-primary col-span-full">
                             No articles found. More posts coming soon!
                         </div>

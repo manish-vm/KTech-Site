@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from "react-helmet";
 
 const offerings = [
     { icon: '🎨', title: 'Content Creation', description: 'Designing engaging posts, stories, reels, graphics, and video content that captures attention.' },
@@ -37,26 +38,35 @@ const whyChooseUsPoints = [
 const SmmPage: React.FC = () => {
     return (
         <div className="bg-white">
-             <section className="bg-primary text-white py-20" style={{backgroundImage: "url('https://wallpapers.com/images/featured/social-media-apps-dgwr9vwvb0svnu9w.jpg')", backgroundSize: 'cover', backgroundPosition: 'center', backgroundBlendMode: 'overlay', backgroundColor: 'rgba(15, 58, 123, 0.7)'}}>
+            <Helmet>
+                <title>Social Media Marketing Company in Chennai | KTech Digital Solutions</title>
+
+                <meta name="description"
+                    content="Grow your brand online with expert social media marketing in Chennai. KTech Digital Solutions helps businesses with Facebook, Instagram, LinkedIn & YouTube ads." />
+
+                <meta name="keywords"
+                    content="social media marketing Chennai, SMM company Chennai, Facebook ads Chennai, Instagram marketing Chennai, LinkedIn marketing Chennai, YouTube ads Chennai, Tamil Nadu social media services" />
+            </Helmet>
+            <section className="bg-primary text-white py-20" style={{ backgroundImage: "url('https://wallpapers.com/images/featured/social-media-apps-dgwr9vwvb0svnu9w.jpg')", backgroundSize: 'cover', backgroundPosition: 'center', backgroundBlendMode: 'overlay', backgroundColor: 'rgba(15, 58, 123, 0.7)' }}>
                 <div className="container mx-auto px-6 lg:px-8 text-center">
                     <h1 className="text-4xl md:text-5xl font-extrabold mb-2">Social Media Marketing Company in Tamil Nadu</h1>
                     <p className="text-lg text-gray-200">Your SMM Agency in Chennai & Coimbatore</p>
                 </div>
             </section>
-            
+
             <section className="py-16 text-center">
                 <div className="container mx-auto px-6 lg:px-8">
                     <p className="max-w-3xl mx-auto text-lg text-gray-700 mb-8">
-                       Want to grow your brand’s presence on social media? At KTech Digital Solutions (Krishnapillai Group of Companies), we deliver powerful social media marketing services in Tamil Nadu, helping businesses in Chennai, Coimbatore, Madurai, Trichy, and Salem connect with their audience, increase engagement, and boost sales. Let’s build your brand story and reach where it matters most.
+                        Want to grow your brand’s presence on social media? At KTech Digital Solutions (Krishnapillai Group of Companies), we deliver powerful social media marketing services in Tamil Nadu, helping businesses in Chennai, Coimbatore, Madurai, Trichy, and Salem connect with their audience, increase engagement, and boost sales. Let’s build your brand story and reach where it matters most.
                     </p>
-                     <h2 className="text-3xl font-bold text-primary mb-4">Why Your Brand Needs a Strong Social Presence</h2>
+                    <h2 className="text-3xl font-bold text-primary mb-4">Why Your Brand Needs a Strong Social Presence</h2>
                     <p className="max-w-3xl mx-auto text-gray-700">
                         Social media isn’t just for sharing—it’s a platform where customers discover, compare, and decide. With over 3+ billion users globally and increasing smartphone usage in Tamil Nadu, having a clear social media strategy is key to building trust, awareness, and driving conversions.
                     </p>
                 </div>
             </section>
 
-             <section className="py-12 bg-light">
+            <section className="py-12 bg-light">
                 <div className="container mx-auto px-6 lg:px-8">
                     <div className="text-center mb-12">
                         <h2 className="text-4xl font-extrabold text-primary">Our SMM Services</h2>
@@ -75,18 +85,18 @@ const SmmPage: React.FC = () => {
 
             <section className="py-20">
                 <div className="container mx-auto px-6 lg:px-8 text-center">
-                     <h2 className="text-4xl font-extrabold text-primary mb-12">Platforms We Work On</h2>
-                     <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
+                    <h2 className="text-4xl font-extrabold text-primary mb-12">Platforms We Work On</h2>
+                    <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
                         {platforms.map(platform => (
                             <div key={platform.name} className="flex flex-col items-center group">
-                                <img src={platform.logo} alt={platform.name} className="h-12 w-12 md:h-16 md:w-16 grayscale group-hover:grayscale-0 transition-all duration-300"/>
+                                <img src={platform.logo} alt={platform.name} className="h-12 w-12 md:h-16 md:w-16 grayscale group-hover:grayscale-0 transition-all duration-300" />
                                 <span className="mt-2 text-sm text-gray-600 font-medium">{platform.name}</span>
                             </div>
                         ))}
-                     </div>
+                    </div>
                 </div>
             </section>
-            
+
             <section className="py-20 bg-light">
                 <div className="container mx-auto px-6 lg:px-8">
                     <div className="text-center mb-12">
@@ -95,35 +105,35 @@ const SmmPage: React.FC = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 ">
                         {whyChooseUsPoints.map((point, index) => (
                             <div key={index} className="text-center p-6 bg-white rounded-lg shadow-md hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300">
-                                 <h3 className="font-bold text-xl text-primary mb-2">{point.title}</h3>
-                                 <p className="text-gray-600">{point.description}</p>
+                                <h3 className="font-bold text-xl text-primary mb-2">{point.title}</h3>
+                                <p className="text-gray-600">{point.description}</p>
                             </div>
                         ))}
                     </div>
                 </div>
             </section>
 
-             <section className="py-20">
+            <section className="py-20">
                 <div className="container mx-auto px-6 lg:px-8">
                     <div className="text-center mb-12">
                         <h2 className="text-4xl font-extrabold text-primary">Our Process</h2>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
                         {processSteps.map((step) => (
-                             <div key={step.icon} className="text-center p-4 bg-light rounded-lg shadow-md hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300">
-                                 <div className="mx-auto w-16 h-16 rounded-full bg-fuchsia-700 text-white flex items-center justify-center text-2xl font-bold mb-4">
-                                     {step.icon}
-                                 </div>
-                                 <h3 className="text-xl font-bold text-primary mb-2">{step.title}</h3>
-                                 <p className="text-gray-600 text-sm">{step.description}</p>
-                             </div>
+                            <div key={step.icon} className="text-center p-4 bg-light rounded-lg shadow-md hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300">
+                                <div className="mx-auto w-16 h-16 rounded-full bg-fuchsia-700 text-white flex items-center justify-center text-2xl font-bold mb-4">
+                                    {step.icon}
+                                </div>
+                                <h3 className="text-xl font-bold text-primary mb-2">{step.title}</h3>
+                                <p className="text-gray-600 text-sm">{step.description}</p>
+                            </div>
                         ))}
                     </div>
                 </div>
             </section>
 
             <section className="py-20 bg-secondary text-center text-white">
-                 <div className="container mx-auto px-6 lg:px-8">
+                <div className="container mx-auto px-6 lg:px-8">
                     <h2 className="text-3xl font-bold mb-4">Ready to amplify your social presence?</h2>
                     <Link to="/contact" className="inline-block bg-fuchsia-700 text-white font-bold py-3 px-8 rounded-full text-lg hover:bg-fuchsia-900 transition-transform transform hover:scale-105 duration-300">
                         Get a Free Social Media Audit & Quote

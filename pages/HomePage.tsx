@@ -1,12 +1,13 @@
 
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from "react-helmet";
 
 const services = [
     {
         icon: (
             <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 text-fuchsia-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
             </svg>
         ),
         title: 'Search Engine Optimization (SEO)',
@@ -85,39 +86,39 @@ const whyChooseUsPoints = [
 ];
 
 const clientLogos = [
-  'https://via.placeholder.com/150x60/cccccc/ffffff?text=Client+1',
-  'https://via.placeholder.com/150x60/cccccc/ffffff?text=Client+2',
-  'https://via.placeholder.com/150x60/cccccc/ffffff?text=Client+3',
-  'https://via.placeholder.com/150x60/cccccc/ffffff?text=Client+4',
-  'https://via.placeholder.com/150x60/cccccc/ffffff?text=Client+5',
-  'https://via.placeholder.com/150x60/cccccc/ffffff?text=Client+6'
+    'https://via.placeholder.com/150x60/cccccc/ffffff?text=Client+1',
+    'https://via.placeholder.com/150x60/cccccc/ffffff?text=Client+2',
+    'https://via.placeholder.com/150x60/cccccc/ffffff?text=Client+3',
+    'https://via.placeholder.com/150x60/cccccc/ffffff?text=Client+4',
+    'https://via.placeholder.com/150x60/cccccc/ffffff?text=Client+5',
+    'https://via.placeholder.com/150x60/cccccc/ffffff?text=Client+6'
 ];
 
 const initialPortfolioProjects = [
-  {
-    image: 'https://static.vecteezy.com/system/resources/previews/026/608/976/large_2x/women-s-fashion-store-in-the-shopping-center-or-mall-clothes-store-with-mannequin-shopping-day-concept-by-ai-generated-free-photo.jpg',
-    category: 'SEO & LOCAL PPC',
-    title: 'Coimbatore Fashion Store',
-    description: 'We executed a hyper-local SEO and Google Ads strategy to increase footfall and online sales for a boutique fashion store in Coimbatore.',
-    result: '+60% Increase in Organic Traffic',
-    link: '#'
-  },
-  {
-    image: 'https://media.istockphoto.com/id/1409298953/photo/real-estate-agents-shake-hands-after-the-signing-of-the-contract-agreement-is-complete.jpg?s=612x612&w=0&k=20&c=SFybbpGMB0wIoI0tJotFqptzAYK_mICVITNdQIXqnyc=',
-    category: 'WEBSITE DEVELOPMENT & SMM',
-    title: 'Madurai Real Estate',
-    description: 'Developed a high-converting website and ran targeted social media campaigns on Facebook and Instagram to generate qualified leads for a new property launch.',
-    result: '300+ Quality Leads in 3 Months',
-    link: '#'
-  },
-  {
-    image: 'https://thumbs.dreamstime.com/b/store-modern-electronics-hub-featuring-sleek-gadgets-cutting-edge-displays-illuminated-bright-lights-offering-k-391483254.jpg',
-    category: 'E-COMMERCE MARKETING',
-    title: 'Chennai Electronics Hub',
-    description: 'A full-funnel e-commerce marketing strategy including Google Shopping Ads and content marketing, resulting in a significant revenue boost.',
-    result: '+150% ROI on Ad Spend',
-    link: '#'
-  }
+    {
+        image: 'https://static.vecteezy.com/system/resources/previews/026/608/976/large_2x/women-s-fashion-store-in-the-shopping-center-or-mall-clothes-store-with-mannequin-shopping-day-concept-by-ai-generated-free-photo.jpg',
+        category: 'SEO & LOCAL PPC',
+        title: 'Coimbatore Fashion Store',
+        description: 'We executed a hyper-local SEO and Google Ads strategy to increase footfall and online sales for a boutique fashion store in Coimbatore.',
+        result: '+60% Increase in Organic Traffic',
+        link: '#'
+    },
+    {
+        image: 'https://media.istockphoto.com/id/1409298953/photo/real-estate-agents-shake-hands-after-the-signing-of-the-contract-agreement-is-complete.jpg?s=612x612&w=0&k=20&c=SFybbpGMB0wIoI0tJotFqptzAYK_mICVITNdQIXqnyc=',
+        category: 'WEBSITE DEVELOPMENT & SMM',
+        title: 'Madurai Real Estate',
+        description: 'Developed a high-converting website and ran targeted social media campaigns on Facebook and Instagram to generate qualified leads for a new property launch.',
+        result: '300+ Quality Leads in 3 Months',
+        link: '#'
+    },
+    {
+        image: 'https://thumbs.dreamstime.com/b/store-modern-electronics-hub-featuring-sleek-gadgets-cutting-edge-displays-illuminated-bright-lights-offering-k-391483254.jpg',
+        category: 'E-COMMERCE MARKETING',
+        title: 'Chennai Electronics Hub',
+        description: 'A full-funnel e-commerce marketing strategy including Google Shopping Ads and content marketing, resulting in a significant revenue boost.',
+        result: '+150% ROI on Ad Spend',
+        link: '#'
+    }
 ];
 
 const PORTFOLIO_STORAGE_KEY = 'ktech_portfolio_projects';
@@ -143,6 +144,17 @@ const HomePage: React.FC = () => {
 
     return (
         <div className="bg-white">
+            <Helmet>
+                <title>Digital Marketing Company in Chennai | KTech Digital Solutions</title>
+
+                <meta
+                    name="description"
+                    content="KTech Digital Solutions is a leading digital marketing company in Chennai, Tamil Nadu. We provide SEO, social media, PPC, branding, web development & more."
+                />
+
+                <meta name="keywords" content="digital marketing company Chennai, SEO services Chennai, social media marketing Chennai, PPC services Chennai, branding services Chennai, web development Chennai, mobile app development Chennai, Tamil Nadu digital marketing, best digital marketing agency Chennai" />
+
+            </Helmet>
             {/* Hero Section */}
             <section className="bg-sky-50 overflow-hidden">
                 <div className="container mx-auto px-6 lg:px-8 py-16 md:py-20">
@@ -170,13 +182,13 @@ const HomePage: React.FC = () => {
 
                         {/* Right Column */}
                         <div className="relative mt-12 md:mt-0 flex justify-center items-center h-80 md:h-96 lg:h-auto">
-                             <div className="absolute w-80 h-80 md:w-96 md:h-96 lg:w-[500px] lg:h-[500px] bg-gradient-to-br from-cyan-200 to-sky-400 rounded-full"></div>
-                             <img 
-                                src="pages/home_bg.png" 
-                                alt="Digital Marketing Expert with Laptop" 
+                            <div className="absolute w-80 h-80 md:w-96 md:h-96 lg:w-[500px] lg:h-[500px] bg-gradient-to-br from-cyan-200 to-sky-400 rounded-full"></div>
+                            <img
+                                src="pages/home_bg.png"
+                                alt="Digital Marketing Expert with Laptop"
                                 className="relative z-10 w-full max-w-xs sm:max-w-sm lg:max-w-md mb-[50px] "
-                                
-                             />
+
+                            />
                         </div>
                     </div>
                 </div>
@@ -237,7 +249,7 @@ const HomePage: React.FC = () => {
                 </div>
             </section>
 
-              {/* Portfolio Section */}
+            {/* Portfolio Section */}
             <section className="py-20">
                 <div className="container mx-auto px-6 lg:px-8">
                     <div className="text-center mb-12">
@@ -264,7 +276,7 @@ const HomePage: React.FC = () => {
                     </div>
                 </div>
             </section>
-            
+
 
             {/* Social Proof/Clients Section */}
             <section className="py-20">
@@ -272,7 +284,7 @@ const HomePage: React.FC = () => {
                     <div className="text-center mb-12">
                         <h2 className="text-4xl font-extrabold text-primary">Our Clients & Results</h2>
                         <p className="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
-                           We’ve partnered with businesses across Tamil Nadu in industries like Retail, Education, Real Estate, Fashion, Beauty & Salon, and E-Commerce.
+                            We’ve partnered with businesses across Tamil Nadu in industries like Retail, Education, Real Estate, Fashion, Beauty & Salon, and E-Commerce.
                         </p>
                     </div>
                     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
