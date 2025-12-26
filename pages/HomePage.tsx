@@ -184,7 +184,7 @@ const HomePage: React.FC = () => {
                         <div className="relative mt-12 md:mt-0 flex justify-center items-center h-80 md:h-96 lg:h-auto">
                             <div className="absolute w-80 h-80 md:w-96 md:h-96 lg:w-[500px] lg:h-[500px] bg-gradient-to-br from-cyan-200 to-sky-400 rounded-full"></div>
                             <img
-                                src="https://github.com/manish-vm/KTech-Site/blob/main/pages/home_bg.png?raw=true"
+                                src="https://github.com/manish-vm/KTech-Site/blob/main/pages/ktech-removebg-preview.png?raw=true"
                                 alt="Digital Marketing Expert with Laptop"
                                 className="relative z-10 w-full max-w-xs sm:max-w-sm lg:max-w-md mb-[50px] "
 
