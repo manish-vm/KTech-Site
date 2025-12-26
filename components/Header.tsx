@@ -35,7 +35,7 @@ const Header: React.FC = () => {
         <div className="flex items-center justify-between h-20">
           <div className="flex-shrink-0">
             <Link to="/">
-                <img src="pages/ktech_logo.png" height="80px" width="150px"/>
+                <img src="https://github.com/manish-vm/KTech-Site/blob/main/pages/ktech_logo.png?raw=true" height="80px" width="150px"/>
             </Link>
           </div>
           <div className="hidden md:block">
