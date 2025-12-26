@@ -86,13 +86,16 @@ const whyChooseUsPoints = [
 ];
 
 const clientLogos = [
-    'https://via.placeholder.com/150x60/cccccc/ffffff?text=Client+1',
-    'https://via.placeholder.com/150x60/cccccc/ffffff?text=Client+2',
-    'https://via.placeholder.com/150x60/cccccc/ffffff?text=Client+3',
-    'https://via.placeholder.com/150x60/cccccc/ffffff?text=Client+4',
-    'https://via.placeholder.com/150x60/cccccc/ffffff?text=Client+5',
-    'https://via.placeholder.com/150x60/cccccc/ffffff?text=Client+6'
+    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkbzhZ3DLvbgHx4F4pJaDNMlobyqsUdZtI_A&s',
+    'https://cdn.dribbble.com/userupload/17912761/file/original-17f83ab9e3a0174c17f29dc0be220f96.jpg?resize=1024x768&vertical=center',
+    'https://cdn.dribbble.com/userupload/17753692/file/original-020115a1a6a7bda735c7c4e724cf486a.jpg?resize=1024x768&vertical=center',
+    'https://cdn.dribbble.com/userupload/15975397/file/original-146ed43c0450b52a5ead99ccda6a1831.jpg?resize=1024x768&vertical=center',
+    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUN0AztTOscRZpehOxXowZv9Ku89aGkWVZlA&s',
+    'https://cdn.dribbble.com/userupload/14080506/file/original-25022079e3590d3cede30f334003dbeb.jpg?resize=400x0'
 ];
+
+// Duplicate logos for seamless infinite loop
+const duplicatedClientLogos = [...clientLogos, ...clientLogos];
 
 const initialPortfolioProjects = [
     {
@@ -287,14 +290,29 @@ const HomePage: React.FC = () => {
                             We’ve partnered with businesses across Tamil Nadu in industries like Retail, Education, Real Estate, Fashion, Beauty & Salon, and E-Commerce.
                         </p>
                     </div>
-                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
-                        {clientLogos.map((logo, index) => (
-                            <div key={index} className="flex justify-center">
-                                <img src={logo} alt={`Client logo ${index + 1}`} className="max-h-16 opacity-60 hover:opacity-100 transition-opacity duration-300" />
-                            </div>
-                        ))}
+                    <div className="overflow-hidden">
+                        <div className="flex animate-slide">
+                            {duplicatedClientLogos.map((logo, index) => (
+                                <div key={index} className="flex-shrink-0 mx-4">
+                                    <img src={logo} alt={`Client logo ${(index % clientLogos.length) + 1}`} className="h-20 w-auto  duration-300" />
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 </div>
+                <style jsx>{`
+                    @keyframes slide {
+                        0% {
+                            transform: translateX(0);
+                        }
+                        100% {
+                            transform: translateX(-50%);
+                        }
+                    }
+                    .animate-slide {
+                        animation: slide 20s linear infinite;
+                    }
+                `}</style>
             </section>
         </div>
     );
