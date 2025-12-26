@@ -186,7 +186,7 @@ const HomePage: React.FC = () => {
                             <img
                                 src="https://github.com/manish-vm/KTech-Site/blob/main/pages/ktech-removebg-preview.png?raw=true"
                                 alt="Digital Marketing Expert with Laptop"
-                                className="relative z-10 w-full max-w-xs sm:max-w-sm lg:max-w-md mb-[50px] "
+                                className="relative z-10 w-500 h-500  "
 
                             />
                         </div>
