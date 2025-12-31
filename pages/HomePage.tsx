@@ -187,9 +187,9 @@ const HomePage: React.FC = () => {
                         <div className="relative mt-12 md:mt-0 flex justify-center items-center h-80 md:h-96 lg:h-auto">
                             <div className="absolute w-80 h-80 md:w-96 md:h-96 lg:w-[500px] lg:h-[500px] bg-gradient-to-br from-cyan-200 to-sky-400 rounded-full"></div>
                             <img
-                                src="https://github.com/manish-vm/KTech-Site/blob/main/pages/ktech-removebg-preview.png?raw=true"
+                                src="pages/Ktech_home-bg.png"
                                 alt="Digital Marketing Expert with Laptop"
-                                className="relative z-10 w-500 h-500  "
+                                className="relative z-10 w-400 h-400 mb-12 rounded-full object-cover"
 
                             />
                         </div>
@@ -294,7 +294,7 @@ const HomePage: React.FC = () => {
                         <div className="flex animate-slide">
                             {duplicatedClientLogos.map((logo, index) => (
                                 <div key={index} className="flex-shrink-0 mx-4">
-                                    <img src={logo} alt={`Client logo ${(index % clientLogos.length) + 1}`} className="h-20 w-auto  duration-300 rounded-full" />
+                                    <img src={logo} alt={`Client logo ${(index % clientLogos.length) + 1}`} className="h-20 w-auto  duration-300 rounded-lg" />
                                 </div>
                             ))}
                         </div>
@@ -310,7 +310,7 @@ const HomePage: React.FC = () => {
                         }
                     }
                     .animate-slide {
-                        animation: slide 20s linear infinite;
+                        animation: slide 10s linear infinite;
                     }
                 `}</style>
             </section>
